@@ -16,17 +16,21 @@ function click(e){
  /* let litres = 0;*/
   const litres = (bottles*0.33);
   const grams1 = (litres*8*4.5);
-  const burning = (weight/10);
-  const grams2 = (grams1-burning*(time));
+  const burning = weight/10;
+  const grams2 = grams1-(burning*time);
     
-  if (gender=='male'){
-    formula =((grams2/weight)*0.7)
+  if (gender==='male'){
+    formula =grams2/(weight*0.7)
   }else{
-    formula =((grams2/weight)*0.6)
+    formula =grams2/(weight*0.6)
   }
 setResult (formula);
-}
 
+ if (formula < 0) {
+return result = 'negative'
+ }
+
+}
 
 
 return(
@@ -76,7 +80,7 @@ return(
     </div>
     <div>
       <output>
-        {result}
+        {result.toFixed(2)}
       </output>
     </div>
     <button>Calculate</button>
