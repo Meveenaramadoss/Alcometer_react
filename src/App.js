@@ -26,12 +26,11 @@ function click(e){
   }
 setResult (formula);
 
- if (formula < 0) {
-return result = 'negative'
- }
-
 }
 
+if (result <0 ){
+  return  '0';
+}
 
 return(
   <div>
@@ -78,6 +77,7 @@ return(
       <input type="radio" name="gender" value ="female" onChange = {e =>setGender(e.target.value)}/><label>Female</label>
 
     </div>
+    
     <div>
       <output>
         {result.toFixed(2)}
@@ -89,5 +89,6 @@ return(
   </div>
 )
 }
+
 
 export default App;
