@@ -28,7 +28,7 @@ setResult (formula);
 
 }
 
-if (result <0 ){
+if (result < 0 ){
   return  '0';
 }
 
